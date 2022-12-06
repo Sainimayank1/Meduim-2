@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../scss/components/_home.scss'
 import { Helmet } from 'react-helmet'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import fetchAllPost from '../store/asyncMethods/fetchAllPosts.js'
-import Pagination from './Pagination.js';
 import moment from "moment";
-import toast, { Toaster } from "react-hot-toast"
 import Loading from './Loading.js';
 import { htmlToText } from 'html-to-text';
-import { Link } from 'react-router-dom';
 import fetchdetails from "../store/asyncMethods/details.js"
+import '../scss/components/_details.scss'
 
 function Details() {
   let { id } = useParams();
+  const [comment,setComment] = useState("")
   const dispatch = useDispatch();
-  const { loading } = useSelector(state => state.authReducer)
+  const { loading ,user} = useSelector(state => state.authReducer)
   const {details} = useSelector(state => state.updateReducer)
+
+  const submitComment = (e) =>
+  {
+    e.preventDefault();
+  }
+
   useEffect(() => {
     dispatch(fetchdetails(id));
   }, [id])
@@ -27,17 +31,14 @@ function Details() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Details..</title>
+        <title>{details.title}</title>
       </Helmet>
-      <div className='home-container'>
+      <div className='home-container bg-light'>
         <div className='home-smaller'>
           {loading ? <Loading /> : 
-              <div className='home-items'>
+              <div className='home-items border-none'>
                 <div className='home-left'>
                   <div className='avatar'>
-                    <span className='avatar-left'>
-                      {details.userName[0]}
-                    </span>
                     <div className='avatar-right'>
                       <span>{details.userName}</span>
                       <span>{moment(details.updatedAt).format("MMM Do YY")}</span>
@@ -46,7 +47,7 @@ function Details() {
                   <div className='content-title'>
                       {details.title}
                   </div>
-                  <div className='content-body'>
+                  <div className='content-desc'>
                     {details.description}
                   </div>
                   <div className='content-body'>
@@ -57,6 +58,12 @@ function Details() {
                   <img className='home-right-image' src={'/images/' + details.image}></img>
                 </div>
               </div>}
+              { user ? <div className='detail-form'>
+                <form>
+                    <input type='text' className='detail-inp ' onChange={(e)=>setComment(e.target.value)} value={comment} placeholder='Enter Comment.'></input>
+                    <input type='submit' onClick={submitComment} value="Submit" className='submit-detail'></input>
+                </form>
+                </div>: ""}
         </div>
       </div>
     </>

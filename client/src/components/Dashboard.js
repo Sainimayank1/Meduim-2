@@ -82,7 +82,9 @@ function Dashboard() {
                             posts.map((content) =>
                                 <div className='grid-items' key={content._id} >
                                     <div className='div-first'>
+                                    <Link to={'/details/'+content._id}>
                                     {content.title}
+                                    </Link>
                                     <span>Published: {moment(content.updatedAt).fromNow()}</span>
                                     </div>
                                     <div>

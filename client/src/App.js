@@ -20,9 +20,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={user ? <Home /> : <Login/>} />
-          <Route path="/home/:page" exact element={user ? <Home /> : <Login/>} />
-          <Route path="/details/:id" exact element={user ? <Details /> : <Login/>} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/home/:page" exact element={<Home />} />
+          <Route path="/details/:id" exact element={<Details />} />
           <Route path="/login" exact element={user ? <Dashboard/> : <Login/>} />
           <Route path="/register" exact element={user ? <Dashboard/> : <Register/>} />
           <Route path="/dashboard/:page" element={user ? <Dashboard/> : <Login/>} />

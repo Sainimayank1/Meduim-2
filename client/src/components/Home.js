@@ -30,10 +30,10 @@ function Home() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home</title>
+        <title>Home..</title>
       </Helmet>
       <div className='home-container'>
-        <div className='home-smaller'>
+        <div className={loading ? "hidden" : "home-smaller"}>
           {loading ? <Loading /> : posts.length > 0 ?
             posts.map((content) =>
               <div className='home-items'>
@@ -48,19 +48,19 @@ function Home() {
                     </div>
                   </div>
                   <div className='content-title'>
-                    <Link to={'/details/'+content._id}>
+                    <Link to={'/details/' + content._id}>
                       {content.title}
                     </Link>
                   </div>
                   <div className='content-body'>
-                    {htmlToText(content.body).slice(0,300) + '....'}
+                    {htmlToText(content.body).slice(0, 200) + '....'}
                   </div>
                 </div>
                 <div className='home-right'>
                   <img className='home-right-image' src={'/images/' + content.image}></img>
                 </div>
               </div>)
-            :""}
+            : <div >""</div>}
           {loading ? "" : <Pagination path="home" page={page} count={count} perPage={perPage} />}
         </div>
       </div>
