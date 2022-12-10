@@ -6,6 +6,9 @@
   "scripts": {
     "client": "cd client && npm start",
     "server": "cd server && npm start",
+    "clientInstall" : "npm install --prefix client",
+    "build":"npm run build --prefix client",
+    "heroku-postbuild":"npm run clientInstall && npm run build ",
     "start": "concurrently \"npm run client\" \"npm run server\""
   },
   "keywords": [],

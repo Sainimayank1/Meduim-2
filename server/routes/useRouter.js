@@ -24,8 +24,8 @@ const router = express.Router();
 
 router.get('/homePosts/:page',homePosts);
 
-router.post("/register", registerValidation, registeration)
-router.post("/login", loginValidation, login)
+router.post("/registers", registerValidation, registeration)
+router.post("/logins", loginValidation, login)
 
 
 
@@ -38,10 +38,10 @@ router.post('/update',[auth , updaetValidation],updatePost)
 router.post('/updateImage',auth,updateImage);
 
 router.get('/delete/:id',auth,postDelete);
-router.post('/updateName',auth,updateName);
-router.post('/updatePassword' ,[auth, updatePasswordValidation],updatePassword)
+router.post('/updateNames',auth,updateName);
+router.post('/updatePasswords' ,[auth, updatePasswordValidation],updatePassword)
 
-router.get('/details/:id',details)
+router.get('/detail/:id',details)
 
 router.post("/comment",auth,postComment);
 

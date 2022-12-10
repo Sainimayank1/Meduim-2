@@ -13,7 +13,7 @@ function updatePassword(data) {
             }
         }
         try {
-            const response = await axios.post('http://localhost:5000/updatePassword',data , config)
+            const response = await axios.post('http://localhost:5000/updatePasswords',data , config)
             dispatch({ type: "CLOSE_LOADER" })
             dispatch({type:"SET_MESSAGE",payload:response.data.msg})
             dispatch({type:"REDIRECT_TRUE"})

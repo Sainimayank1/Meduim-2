@@ -8,6 +8,7 @@ import createAction from "../store/asyncMethods/PostMethods.js"
 import toast, { Toaster } from "react-hot-toast"
 import { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import Loading from './Loading.js';
 
 function Create(props) {
 
@@ -87,6 +88,7 @@ function Create(props) {
                 <meta charSet="utf-8" />
                 <title>Create Post....</title>
             </Helmet>
+            { loading ? <Loading/> :
             <div className='create_main bg-grey'>
                 <div className='main_left'>
                     <div className='create_form'>
@@ -132,6 +134,7 @@ function Create(props) {
                     </div>
                 </div>
             </div>
+            }
         </>
     )
 }

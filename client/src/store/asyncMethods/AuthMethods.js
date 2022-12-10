@@ -14,7 +14,7 @@ export const postRegister = (state) => {
 
     dispatch({ type: 'SET_LOADER' })
     try {
-      const response = await axios.post('http://localhost:5000/register', state,config)
+      const response = await axios.post('http://localhost:5000/registers', state,config)
       if (response) {
         localStorage.setItem('MeduimToken',response.data.token);
         dispatch({type :"SET_TOKEN",payload:response.data.token})
@@ -42,7 +42,7 @@ export const postLogin = (state) =>
     // console.log("HEY");
     dispatch({ type: 'SET_LOADER' })
     try {
-      const response = await axios.post('http://localhost:5000/login', state,config)
+      const response = await axios.post('http://localhost:5000/logins', state,config)
       if (response) {
         localStorage.setItem('MeduimToken',response.data.token);
         dispatch({type :"SET_TOKEN",payload:response.data.token})

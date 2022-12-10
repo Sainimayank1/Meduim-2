@@ -14,7 +14,7 @@ function updateName(data) {
         }
         try {
             console.log(data.name ,data._id)
-            const response = await axios.post('http://localhost:5000/updateName',data ,  config)
+            const response = await axios.post('http://localhost:5000/updateNames',data ,  config)
            localStorage.setItem('MeduimToken',response.data.token);
             dispatch({ type: "CLOSE_LOADER" })
             dispatch({type:"SET_MESSAGE",payload:response.data.msg})
