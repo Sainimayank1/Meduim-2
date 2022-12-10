@@ -23,7 +23,6 @@ function Dashboard() {
     const { posts, count, perPage } = useSelector(state => state.fetchReducer);
     const { updateMsg } = useSelector(state => state.updateReducer)
     let { page } = useParams();
-    // console.log(page)
     if (page === undefined)
         page = 1;
     const _id = user._id;

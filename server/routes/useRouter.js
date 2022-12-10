@@ -12,6 +12,7 @@ import updateName from "../controller/updateName.js";
 import {updatePassword ,updatePasswordValidation} from "../controller/updatePassword.js";
 import homePosts from "../controller/homePosts.js";
 import details from "../controller/details.js";
+import postComment from "../controller/postComment.js";
 
 const router = express.Router();
 
@@ -41,6 +42,8 @@ router.post('/updateName',auth,updateName);
 router.post('/updatePassword' ,[auth, updatePasswordValidation],updatePassword)
 
 router.get('/details/:id',details)
+
+router.post("/comment",auth,postComment);
 
 
 export default router;

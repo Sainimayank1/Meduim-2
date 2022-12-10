@@ -25,7 +25,7 @@ function Home() {
   useEffect(() => {
     dispatch(fetchAllPost(page))
   }, [page])
-  console.log(posts, count, perPage)
+
   return (
     <>
       <Helmet>
@@ -36,7 +36,7 @@ function Home() {
         <div className={loading ? "hidden" : "home-smaller"}>
           {loading ? <Loading /> : posts.length > 0 ?
             posts.map((content) =>
-              <div className='home-items'>
+              <div className='home-items' key={content._id}>
                 <div className='home-left'>
                   <div className='avatar'>
                     <span className='avatar-left'>
