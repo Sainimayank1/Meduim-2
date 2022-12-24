@@ -17,11 +17,15 @@
         width: 8rem;
         height: 8rem;
         border-radius:50% ;
-        border-top: 0.4rem dotted green;
-        border-bottom: 0.4rem dotted green;
-        border-left: 0.4rem dotted green ;
-        border-right: 0.4 solid transparent;
-        animation: loader 1.5s linear;
+        // border-top: 0.4rem dotted green;
+        // border-bottom: 0.4rem dotted green;
+        // border-left: 0.4rem dotted green ;
+        
+        border-top: 0.2rem solid green;
+        border-bottom: 0.2rem solid green;
+        border-left: 0.2rem solid green ;
+        border-right: 0.2 solid transparent;
+        animation: loader 1s linear;
         animation-iteration-count: infinite;
 
         @keyframes loader {
