@@ -28,13 +28,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // border: 2px solid green;
+            border: 2px solid green;
             flex-direction: column;
             width: 80%;
             input{
                 margin: 2rem;
                 width: 50rem;
                 height: 5rem;
+                display: block;
                 padding-left: 2rem;
                 outline: none;
                 border: none;
@@ -72,14 +73,14 @@
 
 
 
-@media screen and  (max-device-width: 850px) {
-    .login-container {
-      .login-form {
-          #login-form{
-         input{
-          width: 80%;
-         }
-      }
-      }
-    }
-  }
+// @media  (max-width: 1260px) {
+//     #login-form
+//     {
+//         input{
+//             width: 10rem;
+//             padding-left: 1rem;
+//             // border: 1px solid black;
+//             background-color: #000;
+//         }
+//     }
+//   }
