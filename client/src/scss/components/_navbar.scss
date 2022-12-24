@@ -35,9 +35,19 @@
             width: 30%;
             display: flex;
             justify-content: space-around;
+            align-items: center;
 
             a{
                 text-decoration: none;
+                margin: 0 1rem;
+                padding: 1rem;
+            }
+
+            a:hover{
+                border-bottom:2px solid green;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
             }
         }
     }
