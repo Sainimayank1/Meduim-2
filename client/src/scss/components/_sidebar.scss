@@ -6,6 +6,7 @@
     flex-direction: column;
     box-shadow: 0px 10px 4rem 0.1px rgba(165, 148, 148, 0.251);
 
+    
     .sidebar:first-child {
         border-top: 2px solid #f5f7fcdf;
         border-top-left-radius: 1rem;
@@ -38,5 +39,13 @@
                 color: white;
             }
         }
+    }
+}
+
+
+@media (max-width:650px) {
+
+    .sidebar {
+        width: 100%;
     }
 }

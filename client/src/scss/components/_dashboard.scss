@@ -13,7 +13,7 @@
         // border: 2px solid black;
         display: flex;
         justify-content: flex-end;
-        
+
     }
 
     .dash-right {
@@ -21,12 +21,12 @@
         flex: 2;
         // border: 2px solid black;
         display: flex;
-        align-items:flex-start;
+        align-items: flex-start;
         flex-direction: column;
         height: auto;
 
         .grid-container:first-child {
-            border-top: 2px solid   #f5f7fcdf;
+            border-top: 2px solid #f5f7fcdf;
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
         }
@@ -48,35 +48,36 @@
                 font-size: 1.4rem;
                 font-weight: bold;
                 display: flex;
-                justify-content:space-between ;
+                justify-content: space-between;
                 align-items: center;
                 padding: 1.5rem;
                 border-bottom: 2px solid #f5f7fcdf;
                 width: 90%;
 
-                .div-first
-                {
+                .div-first {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
 
-                    a{
+                    a {
                         list-style: none;
                         text-decoration: none;
                         color: black;
                     }
+
                 }
-                span
-                {
+
+                span {
                     font-size: 1rem;
                     display: block !important;
                     color: silver;
                 }
 
-                div{
+                div {
                     display: flex;
                     align-items: center;
+
                     .link {
                         margin: 0.5rem;
                         font-size: 1.8rem;
@@ -87,5 +88,35 @@
             }
         }
 
+    }
+}
+
+
+@media (max-width:650px) {
+    .dash-container {
+       
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // border: 2px solid red;
+        gap: 5rem;
+
+        .dash-left {
+            width: 80%;
+            flex: 1 !important;
+            // border: 2px solid red;
+        }
+
+        .dash-right{
+            // border: 2px solid red;
+            flex: 1 !important;
+            width: 80%;
+            margin-top: 1rem !important;
+
+            .grid-container {
+                width: 100%;
+            }
+        }
+       
     }
 }

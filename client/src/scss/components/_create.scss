@@ -12,12 +12,11 @@
         flex-direction: column;
         // border: 2px solid red;
 
-        
-        .desc
-        {
+
+        .desc {
             margin-top: 1rem;
 
-            textarea{
+            textarea {
                 padding: 1rem;
                 width: calc(100% - 3rem);
                 border: none;
@@ -28,8 +27,9 @@
                 }
             }
 
-            span{
-                margin-left:calc(100% - 8rem);;
+            span {
+                margin-left: calc(100% - 8rem);
+                ;
             }
         }
 
@@ -127,6 +127,7 @@
                 border: none;
                 cursor: pointer;
             }
+
             .imagepreview {
                 img {
                     margin-top: 1rem;
@@ -176,7 +177,23 @@
 }
 
 
-@media screen and  (max-device-width: 850px) {
+
+@media (min-width :850px) and (max-width: 1330px) {
+    .main_left {
+        .create_form {
+            .input_file {
+                background: #000;
+
+                label {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 850px) {
 
     .create_main {
         flex-direction: column;

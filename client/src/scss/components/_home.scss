@@ -33,12 +33,12 @@
             flex-direction: row;
             padding: 2rem;
             // margin:1rem 0 0 0;
-            border-bottom: 2px solid rgb(239, 236, 236) ;
+            border-bottom: 2px solid rgb(239, 236, 236);
 
-           span{
-            font-size: 2rem;
-            font-weight: bold;
-           }
+            span {
+                font-size: 2rem;
+                font-weight: bold;
+            }
 
             .home-left {
                 flex: 1.5;
@@ -67,35 +67,33 @@
                     }
                 }
 
-                .content-title
-                {
+                .content-title {
                     margin-top: 1rem;
                     font-size: 3rem;
                     font-weight: 900;
 
-                    a{
+                    a {
                         list-style: none;
                         text-decoration: none;
                         color: black;
                     }
                 }
 
-                .content-body
-                {
+                .content-body {
                     margin-top: 0.5rem;
                     font-size: 1.1rem;
                 }
 
-                .content-desc
-                {
+                .content-desc {
                     margin-top: 0.5rem;
                     font-size: 1.4rem;
                 }
             }
-            .home-left:last-child()
-            {
+
+            .home-left:last-child() {
                 border: none;
             }
+
             .home-right {
                 flex: 1;
                 width: 100%;
@@ -105,12 +103,30 @@
                 margin-left: 1rem;
                 justify-content: center;
 
-                &-image{
+                &-image {
                     width: 70%;
                     height: 70%;
                     // object-fit: cover;
                 }
 
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .home-container {
+        .home-items {
+            .home-items {
+                
+                flex-direction: row !important;
+                border-radius: 2px solid red !important;
+
+                .home-left {
+                    background: #000;
+                }
             }
         }
     }

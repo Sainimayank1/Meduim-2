@@ -13,6 +13,7 @@ import UpdateImage from "./components/UpdateImage.js"
 import UpdateName from "./components/updateName.js";
 import UpdatePassword from "./components/updatePassword.js"
 import Details from "./components/Details.js"
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const { user } = useSelector(state => state.authReducer);
@@ -33,6 +34,7 @@ function App() {
           <Route path="/updatePassword" exact element={user ? <UpdatePassword/> : <Login/>} />
           <Route path='*' element={<NotFound/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     
   );

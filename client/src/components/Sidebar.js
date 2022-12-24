@@ -6,7 +6,7 @@ import '../scss/components/_sidebar.scss'
 function Sidebar() {
     return (
         <div className='sidebar'>
-            <div className='sidebar_item'>
+            <div className='sidebar_item '>
                 <h3>Setting</h3>
             </div>
             <div className='sidebar_item'>

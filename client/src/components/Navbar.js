@@ -63,23 +63,23 @@ function Navbar() {
             </div>
             <div className={show ? "hide" : "dropdown"}>
                 {user ? <>
-                    <Link to="/create" class="">
+                    <Link to="/create" class="" onClick={()=>{setShow(!show)}}>
                         <span>Create Post</span>
                     </Link>
-                    <Link to="/dashboard/1" class="">
+                    <Link to="/dashboard/1" class="" onClick={()=>{setShow(!show)}}>
                         <span>{user.name}</span>
                     </Link>
-                    <Link onClick={logout} class="">
+                    <Link onClick={logout} class="" onClick={()=>{setShow(!show)}}>
                         <span>Logout</span>
                     </Link>
 
                 </>
 
                     :
-                    <><Link to="/login" class="">
+                    <><Link to="/login" class="" onClick={()=>{setShow(!show)}}>
                         <span>Login</span>
                     </Link>
-                        <Link to="/register" class="">
+                        <Link to="/register" class="" onClick={()=>{setShow(!show)}}>
                             <span>Register</span>
                         </Link></>
                 }

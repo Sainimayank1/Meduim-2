@@ -1,0 +1,35 @@
+.footer
+{
+    width: 100%;
+    background: white;
+    color: black;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border-top: 2px solid green;
+
+    .upper-footer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5rem;
+
+        a{
+            font-size: 2.5rem;
+            margin: 0 1rem;
+            color: black;
+        }
+    }
+
+    .down-footer
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        color: black;
+    }
+}
