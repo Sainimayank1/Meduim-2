@@ -64,7 +64,7 @@ const UserCreatePost =  (req,res) => {
             console.log("6")
                 const __filename = fileURLToPath(import.meta.url);
                 const __dirname = dirname(__filename);
-                const newPath= __dirname + "/../../client/build/images/" + files.image.newFilename;
+                const newPath= __dirname + "/../../client/public/images/" + files.image.newFilename;
                 fs.copyFile(files.image.filepath,newPath, async (err)=>
                 {
                     console.log("7")

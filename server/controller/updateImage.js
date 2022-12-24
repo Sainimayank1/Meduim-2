@@ -31,7 +31,7 @@ const updateImage = async (req, res) => {
         else {
             const __filename = fileURLToPath(import.meta.url);
             const __dirname = dirname(__filename);
-            const newPath = __dirname + "/../../client/build/images/" + files.image.newFilename;
+            const newPath = __dirname + "/../../client/public/images/" + files.image.newFilename;
             fs.copyFile(files.image.filepath, newPath, async (err) => {
                 if (err) {
                     res.status(500).json({ error:err })

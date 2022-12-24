@@ -95,7 +95,7 @@ function Dashboard() {
                             : <div className='grid-items' >No Post.</div>
                         }
                     </div>
-                    <Pagination path="dashborad" page={page} count={count} perPage={perPage} />
+                    <Pagination path="dashboard" page={page} count={count} perPage={perPage} />
                 </div>
             </div>
 

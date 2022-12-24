@@ -24,6 +24,7 @@ function Details() {
     e.preventDefault();
     dispatch(postComment({postId:details._id,comment,userName:user.name}))
     dispatch(fetchdetails(id));
+    setComment("");
   }
 
   useEffect(() => {
