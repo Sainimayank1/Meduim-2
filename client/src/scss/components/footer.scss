@@ -33,3 +33,30 @@
         color: black;
     }
 }
+
+@media (max-width :500px){
+    #footer_fir
+    {
+        display: none;
+    }
+
+    #footer_sec
+    {
+        display: none;
+    }
+
+    .upper-footer
+    {
+        a{
+            margin:0 1.5rem !important;
+            font-size: 2rem !important;
+            font-weight: bold !important;
+        }
+    }
+    .down-footer
+    {
+        font-size: 0.8rem;
+    }
+
+
+}

@@ -8,10 +8,14 @@ import { Link } from 'react-router-dom';
 function Footer() {
     const { user, loading } = useSelector(state => state.authReducer);
     return (
+        <>
+        { loading ? "" : <> 
         <div className='footer'>
             <div className='mini-sub'>
                 <div className='upper-footer'>
+                    <div id="footer_fir">
                     --------------------
+                    </div>
                     <a href='https://www.instagram.com/myank.9792/'>
                         <BsInstagram />
                     </a>
@@ -21,7 +25,9 @@ function Footer() {
                     <a href='https://github.com/Sainimayank1'>
                         <BsGithub />
                     </a>
+                    <div id="footer_sec">
                     --------------------
+                    </div>
                 </div>
                 <div className='down-footer'>
                 Copyright © 2022 
@@ -29,6 +35,9 @@ function Footer() {
                 </div>
             </div>
         </div>
+        </>
+        }
+    </>
     )
 }
 
