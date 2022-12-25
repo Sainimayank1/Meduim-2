@@ -1,6 +1,8 @@
 .pagination {
     display: flex;
     margin: 1rem 0; 
+    // border : 2px solid red;/
+    // width: 100%;
 
     .active
     {
@@ -24,6 +26,7 @@
                 color: green;
                 font-size: 1.3rem;
                 cursor: pointer;
+                font-size: bold;
         }
 
         &:hover
@@ -34,4 +37,19 @@
        
     }
    
+}
+
+@media (max-width:750px)
+{
+    .pagination{
+        
+    }
+
+    li
+    {
+        // padding: 0 !important;
+        padding:  0.4rem !important;
+        padding-right: 0.9rem !important;
+        padding-left: 0.9rem !important;
+    }
 }

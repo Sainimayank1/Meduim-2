@@ -70,9 +70,9 @@ function UpdateImage() {
 
                     <form >
                         <div className='image_inputs'>
-                            <label htmlFor="post_pic" className='label bg-grey'>{state.imageName ? state.imageName : "Choose Image.."}</label>
+                            <label htmlFor="post_pic" className='label-update-image label  bg-grey'>{state.imageName ? state.imageName : "Choose Image.."}</label>
                             <input className="hide" type="file" id='post_pic' onChange={handlefile}></input>
-                            <input type="submit" onClick={SubmitForm} value={loading ? "..." : "Update Image..."} className='submit'></input>
+                            <input type="submit" onClick={SubmitForm} value={loading ? "..." : "Update Image..."} className='submit-update-image submit '></input>
                         </div>
                     </form>
 
