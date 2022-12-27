@@ -58,7 +58,7 @@ function Register(prop) {
       <div className='register-container bg-grey'>
         <div className='form bg-white'>
           <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
-          <span>Registration</span>
+          <span className='span'>Registration</span>
           <form id='register-form' onSubmit={handleClick} method="POST">
             <input type="text" name="name" value={state.name} placeholder='Enter Name' onChange={handleState} ></input>
             <input type="text" name="email" value={state.email} placeholder='Enter Email' onChange={handleState}></input>

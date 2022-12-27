@@ -37,7 +37,7 @@ function Login() {
       </Helmet>
       <div className='login-container bg-grey'>
         <div className='login-form bg-white'>
-          <span>Login</span>
+          <span className="login-span">Login</span>
         <Toaster position="top-right" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
           <form id='login-form' onSubmit={handleSubmit}>
             <input type="text" onChange={handleChange} name="email" placeholder='Enter Email' value={state.email}required></input>

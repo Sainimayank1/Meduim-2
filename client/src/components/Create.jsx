@@ -89,7 +89,7 @@ function Create(props) {
                 <title>Create Post....</title>
             </Helmet>
             { loading ? <Loading/> :
-            <div className='create_main bg-grey'>
+            <div className='create_main'>
                 <div className='main_left'>
                     <div className='create_form'>
                         <h3>Create a new post</h3>
@@ -99,8 +99,8 @@ function Create(props) {
                                 <label htmlFor="post_title" >Post Title</label>
                                 <input className="bg-grey" onChange={handleInput} value={inputValue.title} type="text" id='post_title' placeholder="Post Title..."></input>
                             </div>
-                            <div className='input_file'>
-                                <label htmlFor="post_pic">{state ? state : "Choose Image.."}</label>
+                            <div className='left-input_file'>
+                                <label htmlFor="post_pic" className='create-label'>{state ? state : "Choose Image.."}</label>
                                 <input className="bg-grey" type="file" id='post_pic' onChange={handlefile}></input>
                             </div>
                             <label htmlFor="post_body">Post Body</label>

@@ -70,7 +70,7 @@ function Dashboard() {
                 <meta charSet="utf-8" />
                 <title>Dashboard</title>
             </Helmet>
-            <div className='dash-container bg-grey'>
+            <div className='dash-container '>
                 <Toaster position="top-center" reverseOrder={false} toastOptions={{ style: { fontSize: '14px' } }} />
                 <div className='dash-left'>
                     {loading ? '' : <Sidebar />}

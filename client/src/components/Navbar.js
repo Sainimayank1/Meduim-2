@@ -33,24 +33,24 @@ function Navbar() {
                     </div>
                     <div className='nav_right'>
                         {user ? <>
-                            <Link to="/create" class="">
-                                <span>Create Post</span>
+                            <Link to="/create" className="a">
+                                <span className='navbar-span'>Create Post</span>
                             </Link>
-                            <Link to="/dashboard/1" class="">
-                                <span>{user.name}</span>
+                            <Link to="/dashboard/1" className="a">
+                                <span className='navbar-span'>{user.name}</span>
                             </Link>
-                            <Link onClick={logout} class="">
-                                <span>Logout</span>
+                            <Link onClick={logout} className="a">
+                                <span className='navbar-span'>Logout</span>
                             </Link>
 
                         </>
 
                             :
-                            <><Link to="/login" class="">
-                                <span>Login</span>
+                            <><Link to="/login" className="a">
+                                <span className='navbar-span'>Login</span>
                             </Link>
-                                <Link to="/register" class="">
-                                    <span>Register</span>
+                                <Link to="/register" className="a">
+                                    <span className='navbar-span'>Register</span>
                                 </Link></>
                         }
                         <div className={show ? 'hamburger' : " hamburger hamburger_cross"} onClick={() => { change() }}>
