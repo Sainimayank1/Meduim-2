@@ -6,8 +6,7 @@ import UserRouter from "./routes/useRouter.js"
 import bodyParser from "body-parser";
 import cors from "cors";
 import path from 'path'
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+
 
 dotenv.config()
 
@@ -19,16 +18,17 @@ app.use("/", UserRouter);
 
 connect();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 
-    app.use(express.static(path.join(__dirname,'/client/build')))
-    app.get("*",(req,res)=>
-    {
-        res.sendFile(path.resolve(__dirname,"client","build","index.html"))
-    })
-
-
+console.log(__dirname)
 
 
 app.listen(process.env.PORT, () => console.log("Server is running :" + process.env.PORT))
